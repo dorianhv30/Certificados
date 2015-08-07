@@ -30,8 +30,12 @@ public class ApplicationConfig extends Application {
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(services.CantonFacadeREST.class);
+        resources.add(services.CertificacionFacadeREST.class);
         resources.add(services.CertificadosCORS.class);
         resources.add(services.DistritoFacadeREST.class);
+        resources.add(services.EstudianteFacadeREST.class);
+        resources.add(services.EstudiantenivelFacadeREST.class);
+        resources.add(services.NivelFacadeREST.class);
         resources.add(services.ParametroFacadeREST.class);
         resources.add(services.PerfilFacadeREST.class);
         resources.add(services.ProvinciaFacadeREST.class);
