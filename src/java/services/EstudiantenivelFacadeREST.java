@@ -58,14 +58,14 @@ public class EstudiantenivelFacadeREST extends AbstractFacade<Estudiantenivel> {
 
     @POST
     @Override
-    @Consumes({"application/json"})
+    @Consumes({ "application/json"})
     public void create(Estudiantenivel entity) {
         super.create(entity);
     }
 
     @PUT
     @Path("{id}")
-    @Consumes({"application/json"})
+    @Consumes({ "application/json"})
     public void edit(@PathParam("id") PathSegment id, Estudiantenivel entity) {
         super.edit(entity);
     }
@@ -87,14 +87,14 @@ public class EstudiantenivelFacadeREST extends AbstractFacade<Estudiantenivel> {
 
     @GET
     @Override
-    @Produces({"application/json"})
+    @Produces({ "application/json"})
     public List<Estudiantenivel> findAll() {
         return super.findAll();
     }
 
     @GET
     @Path("{from}/{to}")
-    @Produces({ "application/json"})
+    @Produces({"application/json"})
     public List<Estudiantenivel> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
         return super.findRange(new int[]{from, to});
     }

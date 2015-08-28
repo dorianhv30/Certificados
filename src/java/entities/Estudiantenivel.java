@@ -36,6 +36,9 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Estudiantenivel.findByFolio", query = "SELECT e FROM Estudiantenivel e WHERE e.folio = :folio"),
     @NamedQuery(name = "Estudiantenivel.findByTitulo", query = "SELECT e FROM Estudiantenivel e WHERE e.titulo = :titulo")})
 public class Estudiantenivel implements Serializable {
+    @Size(max = 5)
+    @Column(name = "Egreso")
+    private String egreso;
     private static final long serialVersionUID = 1L;
     @EmbeddedId
     protected EstudiantenivelPK estudiantenivelPK;
@@ -168,6 +171,14 @@ public class Estudiantenivel implements Serializable {
     @Override
     public String toString() {
         return "entities.Estudiantenivel[ estudiantenivelPK=" + estudiantenivelPK + " ]";
+    }
+
+    public String getEgreso() {
+        return egreso;
+    }
+
+    public void setEgreso(String egreso) {
+        this.egreso = egreso;
     }
     
 }
