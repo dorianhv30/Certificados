@@ -1,0 +1,16 @@
+SELECT ppxc.cod_plan_prueba_control, 
+		ppxc.cod_plataforma,
+		ppxc.cod_tipo_revision_control,
+		catc.cod_referencia_riesgo_sox,
+		catc.cod_control,
+		maud.nombre_auditoria,
+		catc.cod_control,
+		catc.desc_muestreo,
+		ppxc.des_muestreo
+  FROM [works].[MAESTRO_AUDITORIAS] maud
+  INNER JOIN [marcso].[CATALOGO_CONTROLES] catc ON (maud.cod_auditoria = catc.cod_auditoria AND maud.cod_pais = catc.cod_pais)
+  INNER JOIN [marcso].[PLANES_PRUEBA_X_CONTROL] ppxc ON (catc.cod_control = ppxc.cod_control)
+  --INNER JOIN [marcso].[INSUMOS_X_PLAN_PRUEBA] ixpp ON (ppxc.cod_plan_prueba_control = ixpp.cod_plan_prueba_control)
+  --INNER JOIN [works].[DOCUMENTOS_X_AUDITORIA] daud ON (ixpp.cod_insumo = daud.cod_llave_actividad_origen)
+  WHERE ppxc.cod_auditor_asignado IS NOT NULL
+  AND maud.cod_auditoria = 235
