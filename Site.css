@@ -1,0 +1,208 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Bootstrap Dropdown Submenu */
+.dropdown-submenu {
+    position: relative;
+}
+ 
+.dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+ 
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+}
+ 
+.dropdown-submenu > a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #cccccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+ 
+.dropdown-submenu:hover > a:after {
+    border-left-color: #ffffff;
+}
+ 
+.dropdown-submenu.pull-left {
+    float: none;
+}
+ 
+.dropdown-submenu.pull-left > .dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+ 
+.navbar-nav .divider-vertical {
+    height: 40px;
+    margin: 0 9px;
+    border-left: 1px solid #f2f2f2;
+    border-right: 1px solid #ffffff;
+}
+
+.top-row { 
+    margin-top:10px; 
+}
+
+/*Formato param mensajes de notificacion*/
+
+.k-notification 
+{
+    border: 0;
+}
+
+
+/* Info template */
+.k-notification-info.k-group {
+    background: rgba(0%,0%,0%,.7);
+    color: #fff;
+}
+.new-mail {
+    width: 350px;
+    height: 200px;
+}
+.new-mail h3 {
+    font-size: 1em;
+    padding: 32px 10px 5px;
+}
+.new-mail span {
+    float: left;
+    margin: 30px 15px 30px 30px;
+}
+
+/* Error template */
+.k-notification-error.k-group {
+    background: rgba(100%,0%,0%,.7);
+    color: #ffffff;
+}
+.system-error {    
+    width: 450px;
+    height: 90px;
+    display: inline-flex;
+    padding: 5px 5px 5px 5px;
+}
+.system-error h3 {
+    font-size: 1em;
+    font-weight:bold;
+}
+.system-error span {     
+    display: inline-block;
+    padding-right: 5px; 
+}
+.system-error .message {
+    display: inline-block;
+    vertical-align:middle;
+    padding-top:20px; 
+}
+
+ /* Success template */
+.k-notification-success.k-group {
+    background: rgba(0%,60%,0%,.7);
+    color: rgba(0%,60%,0%,.7);
+}
+.system-success {
+    width: 450px;
+    height: 90px;
+    display: inline-flex;
+    padding: 5px 5px 5px 5px;  
+}
+.system-success h3 {
+    font-size: 1em;
+    font-weight:bold;
+}
+.system-success span {   
+    display: inline-block;
+    padding-right: 5px;
+}
+.system-success .message {
+    display: inline-block;
+    vertical-align:middle;
+    padding-top:20px;  
+}
+
+
+/* Tamaño de iconos*/
+.gi-2x{font-size: 2em;}
+.gi-3x{font-size: 3em;}
+.gi-4x{font-size: 4em;}
+.gi-5x{font-size: 5em;}
+
+#gridDelete-container {
+    text-align:center;
+    padding: 5px 15px 15px 5px;
+    width:400px;
+
+}
+
+.registrado {
+    color:#4F54FF;
+    font-weight: bold;
+}
+.enviado {
+    color:green;
+    font-weight: bold;
+}
+.rechazado {
+    color:red;
+    font-weight: bold;
+}
+
+ul.k-menu {
+    border: 0;
+    background-color: transparent;
+    font-weight: bold;
+    text-decoration: none;
+    /*background-image: url('divBg_bg.jpg');
+    background-repeat: repeat-x;*/
+    color: #f0323e;
+}
+
+
+.navbar-nav ul.k-menu {
+    border: 0;
+    background-color: transparent;
+    font-weight: bold;
+    text-decoration: none;
+    /*background-image: url('divBg_bg.jpg');
+    background-repeat: repeat-x;*/
+    color: #fff;
+}
